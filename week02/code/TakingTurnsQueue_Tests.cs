@@ -11,7 +11,7 @@ public class TakingTurnsQueueTests
     // Scenario: Create a queue with the following people and turns: Bob (2), Tim (5), Sue (3) and
     // run until the queue is empty
     // Expected Result: Bob, Tim, Sue, Bob, Tim, Sue, Tim, Sue, Tim, Tim
-    // Defect(s) Found: 
+    // Defect(s) Found: No defect found; empty queue correctly throws InvalidOperationException with the expected message.Initial run returned the wrong order and negative turns were not correctly treated as infinite-turn players.Initial run returned the wrong order and people with zero turns were not correctly treated as infinite-turn players.Initial run returned the wrong first person due to incorrect queue ordering; adding a player midway depended on FIFO behavior.Initial run returned people in the wrong order because the underlying queue behaved like LIFO instead of FIFO.
     public void TestTakingTurnsQueue_FiniteRepetition()
     {
         var bob = new Person("Bob", 2);
